@@ -1,0 +1,201 @@
+[gd_scene load_steps=11 format=3 uid="uid://b3x0bt78hrgu7"]
+
+[ext_resource type="Script" uid="uid://b4dljpmygf2ua" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://cnh3oemewa37l" path="res://nodes.gd" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://dgvkm2nnqft2j" path="res://text_node.tscn" id="3_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://bam572wfe78d6" path="res://flag_node.tscn" id="4_lquwl"]
+[ext_resource type="PackedScene" uid="uid://v6fns4abtgwb" path="res://sequence_node.tscn" id="5_lquwl"]
+[ext_resource type="Script" uid="uid://bqddgksg23eg5" path="res://trash.gd" id="6_7mycd"]
+[ext_resource type="FontFile" uid="uid://mhihsb7rt7gi" path="res://fonts/cmunrm.ttf" id="7_272bh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_272bh"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.625033, 0.3217, 0.156303, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5vw27"]
+content_margin_left = 10.0
+content_margin_top = 5.0
+content_margin_right = 10.0
+content_margin_bottom = 5.0
+border_width_left = 4
+border_width_top = 4
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kek77"]
+border_width_left = 3
+border_width_top = 3
+border_color = Color(0, 0, 0, 1)
+
+[node name="main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_ig7tw")
+
+[node name="Nodes" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="DropArea" type="Control" parent="Nodes"]
+unique_name_in_owner = true
+layout_mode = 2
+script = ExtResource("2_h2yge")
+
+[node name="TextNode" parent="Nodes/DropArea" instance=ExtResource("3_1bvp3")]
+layout_mode = 0
+offset_left = 491.0
+offset_top = 306.0
+offset_right = 584.0
+offset_bottom = 347.0
+
+[node name="FlagNode" parent="Nodes/DropArea" instance=ExtResource("4_lquwl")]
+layout_mode = 0
+offset_left = 358.0
+offset_top = 254.0
+offset_right = 436.0
+offset_bottom = 314.0
+
+[node name="SequenceNode" parent="Nodes/DropArea" instance=ExtResource("5_lquwl")]
+layout_mode = 0
+offset_left = 268.0
+offset_top = 328.0
+offset_right = 331.0
+offset_bottom = 383.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Toolbar" type="PanelContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Toolbar"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/Toolbar/HBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_272bh")
+script = ExtResource("6_7mycd")
+
+[node name="Label" type="Label" parent="VBoxContainer/Toolbar/HBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_272bh")
+text = "Delete"
+horizontal_alignment = 1
+
+[node name="NewTerm" type="Button" parent="VBoxContainer/Toolbar/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_fonts/font = ExtResource("7_272bh")
+theme_override_font_sizes/font_size = 24
+text = "Add Term"
+
+[node name="NewFlag" type="Button" parent="VBoxContainer/Toolbar/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_fonts/font = ExtResource("7_272bh")
+theme_override_font_sizes/font_size = 24
+text = "Add Flag"
+
+[node name="NewSequence" type="Button" parent="VBoxContainer/Toolbar/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_fonts/font = ExtResource("7_272bh")
+theme_override_font_sizes/font_size = 24
+text = "Add Sequence"
+
+[node name="HelpButton" type="Button" parent="VBoxContainer/Toolbar/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("7_272bh")
+theme_override_font_sizes/font_size = 24
+toggle_mode = true
+text = "Help"
+
+[node name="RulesButton" type="Button" parent="VBoxContainer/Toolbar/HBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("7_272bh")
+theme_override_font_sizes/font_size = 24
+toggle_mode = true
+text = "Rules"
+
+[node name="HelpPanel" type="PanelContainer" parent="VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_5vw27")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HelpPanel"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HelpPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_272bh")
+theme_override_font_sizes/font_size = 32
+text = "Help"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/HelpPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_kek77")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/HelpPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HelpText" type="RichTextLabel" parent="VBoxContainer/HelpPanel/VBoxContainer/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("7_272bh")
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "Add flags, terms, and sequence skeletons using the buttons at the top of the window.
+
+Arrange the flags and terms to suit your proof by dragging and dropping boxes onto containers with available space (on either flag or sequence nodes)
+
+To the right of the term, a separate box allows entering justifications, such as references to the rules, and/or specific other terms derived.
+
+Text entry fields will automatically replace certain strings prefixed with '\\' with mathematical symbols/Greek letters, as in LaTeX:  
+"
+fit_content = true

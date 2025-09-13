@@ -1,0 +1,12 @@
+[gd_resource type="StyleBoxFlat" format=3 uid="uid://win4pjobmdxk"]
+
+[resource]
+content_margin_left = 5.0
+bg_color = Color(0.290091, 0.290091, 0.290091, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.139413, 0.139413, 0.139413, 1)
+anti_aliasing = false
+anti_aliasing_size = 0.463

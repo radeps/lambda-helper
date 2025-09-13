@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdxvc1afyu32w"]
+
+[ext_resource type="Script" uid="uid://5li52wuawdbx" path="res://drop_area.gd" id="1_5k7wk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5k7wk"]
+bg_color = Color(0.290091, 0.290091, 0.290091, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.139413, 0.139413, 0.139413, 1)
+anti_aliasing = false
+anti_aliasing_size = 0.463
+
+[node name="DropArea" type="PanelContainer"]
+custom_minimum_size = Vector2(10, 10)
+offset_right = 10.0
+offset_bottom = 10.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5k7wk")
+script = ExtResource("1_5k7wk")

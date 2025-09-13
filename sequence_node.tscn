@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=3 uid="uid://v6fns4abtgwb"]
+
+[ext_resource type="Script" uid="uid://ddnxwcjg0g88p" path="res://sequence_node.gd" id="2_y62ty"]
+[ext_resource type="PackedScene" uid="uid://cdxvc1afyu32w" path="res://drop_area.tscn" id="3_dyrrt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d3kk4"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+
+[node name="SequenceNode" type="PanelContainer"]
+custom_minimum_size = Vector2(150, 0)
+offset_left = 632.0
+offset_top = 189.0
+offset_right = 782.0
+offset_bottom = 244.0
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 7
+theme_override_styles/panel = SubResource("StyleBoxFlat_d3kk4")
+script = ExtResource("2_y62ty")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="AddTerm" type="Button" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(17.69, 20.07)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+focus_mode = 0
+text = "+"
+clip_text = true
+
+[node name="RemoveTerm" type="Button" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(17.82, 23.07)
+layout_mode = 2
+size_flags_vertical = 0
+focus_mode = 0
+text = "-"
+clip_text = true
+
+[node name="DropArea" parent="VBoxContainer" instance=ExtResource("3_dyrrt")]
+layout_mode = 2

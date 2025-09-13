@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=3 uid="uid://bam572wfe78d6"]
+
+[ext_resource type="StyleBox" uid="uid://ccms7wderljp7" path="res://box-normal.tres" id="1_8jj15"]
+[ext_resource type="Script" uid="uid://bw66vovlryvge" path="res://flag_node.gd" id="2_0isv1"]
+[ext_resource type="Script" uid="uid://bm4tgvm1ntx3y" path="res://latex-replacing-text.gd" id="3_0isv1"]
+[ext_resource type="FontFile" uid="uid://cxkvbvpmljw28" path="res://fonts/cmunsl.ttf" id="3_i87v1"]
+[ext_resource type="StyleBox" uid="uid://win4pjobmdxk" path="res://text_box.tres" id="4_i87v1"]
+[ext_resource type="PackedScene" uid="uid://cdxvc1afyu32w" path="res://drop_area.tscn" id="6_i87v1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_272bh"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 8
+border_color = Color(0, 0, 0, 1)
+
+[node name="FlagNode" type="PanelContainer"]
+custom_minimum_size = Vector2(120, 0)
+offset_left = 217.0
+offset_top = 220.0
+offset_right = 257.0
+offset_bottom = 260.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_default_cursor_shape = 7
+theme_override_styles/panel = ExtResource("1_8jj15")
+script = ExtResource("2_0isv1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_i87v1")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = ExtResource("4_i87v1")
+placeholder_text = "Flag"
+caret_blink = true
+script = ExtResource("3_0isv1")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_272bh")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DropArea" parent="VBoxContainer/HBoxContainer/VBoxContainer" instance=ExtResource("6_i87v1")]
+layout_mode = 2
