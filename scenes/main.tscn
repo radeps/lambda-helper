@@ -1,11 +1,11 @@
 [gd_scene load_steps=11 format=3 uid="uid://b3x0bt78hrgu7"]
 
-[ext_resource type="Script" uid="uid://b4dljpmygf2ua" path="res://main.gd" id="1_ig7tw"]
-[ext_resource type="Script" uid="uid://cnh3oemewa37l" path="res://nodes.gd" id="2_h2yge"]
-[ext_resource type="PackedScene" uid="uid://dgvkm2nnqft2j" path="res://text_node.tscn" id="3_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://bam572wfe78d6" path="res://flag_node.tscn" id="4_lquwl"]
-[ext_resource type="PackedScene" uid="uid://v6fns4abtgwb" path="res://sequence_node.tscn" id="5_lquwl"]
-[ext_resource type="Script" uid="uid://bqddgksg23eg5" path="res://trash.gd" id="6_7mycd"]
+[ext_resource type="Script" uid="uid://b4dljpmygf2ua" path="res://scripts/main.gd" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://cnh3oemewa37l" path="res://scripts/nodes.gd" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://dgvkm2nnqft2j" path="res://scenes/text_node.tscn" id="3_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://bam572wfe78d6" path="res://scenes/flag_node.tscn" id="4_lquwl"]
+[ext_resource type="PackedScene" uid="uid://v6fns4abtgwb" path="res://scenes/sequence_node.tscn" id="5_lquwl"]
+[ext_resource type="Script" uid="uid://bqddgksg23eg5" path="res://scripts/trash.gd" id="6_7mycd"]
 [ext_resource type="FontFile" uid="uid://mhihsb7rt7gi" path="res://fonts/cmunrm.ttf" id="7_272bh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_272bh"]

@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://dgvkm2nnqft2j"]
 
-[ext_resource type="Script" uid="uid://cmva7stktyotu" path="res://derivation.gd" id="2_hyvkf"]
+[ext_resource type="Script" uid="uid://cmva7stktyotu" path="res://scripts/derivation.gd" id="2_hyvkf"]
 [ext_resource type="FontFile" uid="uid://cxkvbvpmljw28" path="res://fonts/cmunsl.ttf" id="2_lhu1h"]
 [ext_resource type="FontFile" uid="uid://mhihsb7rt7gi" path="res://fonts/cmunrm.ttf" id="2_v6le4"]
-[ext_resource type="Script" uid="uid://bm4tgvm1ntx3y" path="res://latex-replacing-text.gd" id="2_xsn3d"]
-[ext_resource type="StyleBox" uid="uid://win4pjobmdxk" path="res://text_box.tres" id="4_v6le4"]
+[ext_resource type="Script" uid="uid://bm4tgvm1ntx3y" path="res://scripts/latex-replacing-text.gd" id="2_xsn3d"]
+[ext_resource type="StyleBox" uid="uid://win4pjobmdxk" path="res://styles/text_box.tres" id="4_v6le4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w3osq"]
 content_margin_left = 10.0

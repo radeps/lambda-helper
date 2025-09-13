@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://bam572wfe78d6"]
 
-[ext_resource type="StyleBox" uid="uid://ccms7wderljp7" path="res://box-normal.tres" id="1_8jj15"]
-[ext_resource type="Script" uid="uid://bw66vovlryvge" path="res://flag_node.gd" id="2_0isv1"]
-[ext_resource type="Script" uid="uid://bm4tgvm1ntx3y" path="res://latex-replacing-text.gd" id="3_0isv1"]
+[ext_resource type="StyleBox" uid="uid://ccms7wderljp7" path="res://styles/box-normal.tres" id="1_8jj15"]
+[ext_resource type="Script" uid="uid://bw66vovlryvge" path="res://scripts/flag_node.gd" id="2_0isv1"]
+[ext_resource type="Script" uid="uid://bm4tgvm1ntx3y" path="res://scripts/latex-replacing-text.gd" id="3_0isv1"]
 [ext_resource type="FontFile" uid="uid://cxkvbvpmljw28" path="res://fonts/cmunsl.ttf" id="3_i87v1"]
-[ext_resource type="StyleBox" uid="uid://win4pjobmdxk" path="res://text_box.tres" id="4_i87v1"]
-[ext_resource type="PackedScene" uid="uid://cdxvc1afyu32w" path="res://drop_area.tscn" id="6_i87v1"]
+[ext_resource type="StyleBox" uid="uid://win4pjobmdxk" path="res://styles/text_box.tres" id="4_i87v1"]
+[ext_resource type="PackedScene" uid="uid://cdxvc1afyu32w" path="res://scenes/drop_area.tscn" id="6_i87v1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_272bh"]
 bg_color = Color(0, 0, 0, 1)
