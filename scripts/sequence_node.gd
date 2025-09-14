@@ -9,7 +9,7 @@ func _ready():
 	%RemoveTerm.pressed.connect(_on_remove_term)
 
 func _on_add_term():
-	var new_area = load("res://drop_area.tscn").instantiate()
+	var new_area = load("res://scenes/drop_area.tscn").instantiate()
 	$VBoxContainer.add_child(new_area)
 
 func _on_remove_term():

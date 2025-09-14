@@ -37,18 +37,18 @@ func _on_help_pressed():
 	%HelpPanel.visible = %HelpButton.button_pressed
 
 func _on_new_term():
-	var term = load("res://text_node.tscn").instantiate()
+	var term = load("res://scenes/text_node.tscn").instantiate()
 	term.set_number(num_terms + 1)
 	num_terms += 1
 	%DropArea.add_child(term)
 	term.position = term.position + Vector2(randi() % 20, randi() % 20)
 
 func _on_new_flag():
-	var flag = load("res://flag_node.tscn").instantiate()
+	var flag = load("res://scenes/flag_node.tscn").instantiate()
 	%DropArea.add_child(flag)
 	flag.position = flag.position + Vector2(randi() % 20, randi() % 20)
 
 func _on_new_sequence():
-	var seq = load("res://sequence_node.tscn").instantiate()
+	var seq = load("res://scenes/sequence_node.tscn").instantiate()
 	%DropArea.add_child(seq)
 	seq.position = seq.position + Vector2(randi() % 20, randi() % 20)

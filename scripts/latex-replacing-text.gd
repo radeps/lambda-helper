@@ -1,6 +1,6 @@
 class_name LatexReplacingLineEdit extends LineEdit
 
-const REPLACEMENTS = {
+static var REPLACEMENTS = {
 	"\\lambda" : 'λ',
 	"\\in" : '∈',
 	"\\pi" : 'Π',
@@ -8,7 +8,12 @@ const REPLACEMENTS = {
 	"\\to" : '→',
 	"\\implies" : '⇒',
 	"\\forall" : '∀',
-	"\\emptyset" : '∅'
+	"\\emptyset" : '∅',
+	"\\ast" : '∗',
+	"\\bot" : '⟘',
+	"\\top" : '⟙',
+	"\\derive" : '⊢',
+	"\\box" : '☐',
 	}
 
 func _ready():

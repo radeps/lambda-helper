@@ -11,6 +11,7 @@
 bg_color = Color(0, 0, 0, 1)
 border_width_left = 8
 border_color = Color(0, 0, 0, 1)
+expand_margin_top = 3.0
 
 [node name="FlagNode" type="PanelContainer"]
 custom_minimum_size = Vector2(120, 0)
@@ -29,10 +30,12 @@ layout_mode = 2
 
 [node name="LineEdit" type="LineEdit" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 0
 theme_override_fonts/font = ExtResource("3_i87v1")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = ExtResource("4_i87v1")
 placeholder_text = "Flag"
+expand_to_text_length = true
 caret_blink = true
 script = ExtResource("3_0isv1")
 

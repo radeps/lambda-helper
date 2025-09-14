@@ -156,7 +156,6 @@ text = "Rules"
 
 [node name="HelpPanel" type="PanelContainer" parent="VBoxContainer"]
 unique_name_in_owner = true
-visible = false
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_horizontal = 8
@@ -181,7 +180,12 @@ theme_override_styles/separator = SubResource("StyleBoxFlat_kek77")
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="HelpText" type="RichTextLabel" parent="VBoxContainer/HelpPanel/VBoxContainer/ScrollContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HelpPanel/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HelpText" type="RichTextLabel" parent="VBoxContainer/HelpPanel/VBoxContainer/ScrollContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -196,6 +200,6 @@ Arrange the flags and terms to suit your proof by dragging and dropping boxes on
 
 To the right of the term, a separate box allows entering justifications, such as references to the rules, and/or specific other terms derived.
 
-Text entry fields will automatically replace certain strings prefixed with '\\' with mathematical symbols/Greek letters, as in LaTeX:  
+Text entry fields will automatically replace certain strings prefixed with '\\' with mathematical symbols/Greek letters, as in LaTeX. By default, these are:
 "
 fit_content = true
